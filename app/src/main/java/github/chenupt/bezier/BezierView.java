@@ -147,10 +147,10 @@ public class BezierView extends FrameLayout {
     @Override
     protected void onDraw(Canvas canvas){
         if(isAnimStart || !isTouch){
-            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.MULTIPLY);
+            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.OVERLAY);
         }else{
             calculate();
-            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.MULTIPLY);
+            canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.OVERLAY);
             canvas.drawPath(path, paint);
             canvas.drawCircle(startX, startY, radius, paint);
             canvas.drawCircle(x, y, radius, paint);
